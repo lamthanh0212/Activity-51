@@ -1,41 +1,49 @@
 package homework;
 
 public class Rectangle {
-    double cdai ;
-    double crong ;
-    public Rectangle (double cdai , double crong ) {
+    private int cdai ;
+    private int crong ;
+
+    public Rectangle (int crong , int cdai ) {
+        this.crong = crong ;
         this.cdai = cdai ;
+    }
+    public int getCdai () {
+        return cdai ;
+    }
+    public int getCrong () {
+        return crong ;
+    }
+    public void setCdai () {
+        this.cdai = cdai ;
+    }
+    public void setCrong () {
         this.crong = crong ;
     }
 
-
-    public Rectangle() {
-
+    public int tinhcv () {
+        int cv = ( cdai + crong ) * 2 ;
+        return cv ;
     }
-    public boolean ktrahinhvuong (boolean k ) {
-        if (this.crong == this.cdai ) {
-            System.out.println("Hinh vuong ");
-        } else {
-            System.out.println("ko ");
-        }
-        return k ;
+
+    public int tinhdt () {
+        int dt = cdai * crong ;
+        return dt ;
     }
 
 
-
-
-    public void setCdai(double cdai ) {
-        this.cdai = cdai ;
-    }
-    public void setCrong(double crong ) {
-        this.crong = crong ;
-    }
-    double dientich () {
-        return (cdai * crong) ;
+    public void incdaicong () {
+        System.out.println("chieu dai la: " + cdai);
+        System.out.println("chieu rong la: " + crong);
     }
 
-    double chuvi () {
-       return (cdai + crong) * 2 ;
+    public boolean ktrahv () {
+         if ( crong == cdai ) {
+             System.out.println("hinh vuong");
+             return true ;
+         } else {
+             System.out.println("hinh chu nhat ");
+             return false ;
+         }
     }
-
 }
